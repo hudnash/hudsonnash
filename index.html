@@ -4,7 +4,7 @@
 <head>
 	<!-- site info -->
 	<title> J. Hudson Nash </title>
-	<link rel="icon" href="images/myLogo.png">
+	<link rel="icon" href="images/myLogo.svg">
 
 	<!-- meta -->
 	<meta charset="utf-8">
@@ -12,9 +12,7 @@
 
 	<!-- framework imports -->
 	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link href="css/styles.css" rel="stylesheet">
 	<script src="js/bootstrap.min.js"></script>
 	
 	<!-- font family -->
@@ -73,16 +71,34 @@ anchors are inline so you need ot make them block to go full width
 .navbar {
 		box-shadow: 1px 3px rgba(0, 0, 0, 0.1);
 	}
+
+@media all and (min-width: 1400px) { /* screen size until 1200px */
+    h1 {
+        font-size: 2.0em; /* 1.5x default size */
+    }
+}
+
+@media all and (min-width: 769px) { /* screen size until 1200px */
+    body {
+        font-size: 1.2em; /* 1.5x default size */
+    }
+}
+
+@media all and (min-width: 577px) { /* screen size until 1200px */
+    body {
+        font-size: 0.8em; /* 1.5x default size */
+    }
+}
 	</style>
 
 
 <body>
 
 	<!-- Navigation -->
-	<nav class="navbar navbar-default" style="background-color: rgba(67,151,213,0.75); color: white; padding-left: 50px;">
+	<nav class="navbar navbar-default" style="background-color: rgba(67,151,213,0.75); color: white;">
 		<div class="navbar-collapse" id="navbarSupportedContent">
 			<ul class="nav-navbar nav">
-				<li class="nav-item">
+				<li class="nav-item" style="padding-left: 2%;">
 					<a href="https://www.linkedin.com/in/hudsonnash/"><i class="fab fa-linkedin"></i></a>
 				</li>
 				<li class="nav-item ml-3">
@@ -95,16 +111,32 @@ anchors are inline so you need ot make them block to go full width
 		</div>
 	</nav>
 
-<!-- Quick About Me -->
-<div id="quickAboutMe" class="container-fluid" style="padding-bottom: 25px;">
-	<div class="col-sm">
-		<h1 style="font-family: 'Montserrat', sans-serif; padding-left: 100px; padding-top: 100px; font-size: 50pt; text-shadow: -2px 2px rgba(62,113,187, 0.3); color: rgb(62,113,187);"> Hudson Nash </h1>
-		<div class="col-6 offset-md-4 text-right" style="padding-top: 20px;">
-			<p style="color: rgb(25,66,117);">Hello, there! I'm a student at the Academy of Science and Technology at the Woodlands College Park High School. 
-			Currently, I pursue student leadership and research through entrepreneurship and environmental biotechnology.</p>
+	<!-- Quick About Me -->
+	<div id="quickAboutMe" class="container-fluid" style="padding-top: 8%; padding-bottom: 7%;">
+		<div class="row">
+			<div class="col-sm-8">
+				<h1 style="font-family: 'Montserrat', sans-serif; padding-left: 7%; padding-right: 7%; text-shadow: -2px 2px rgba(62,113,187, 0.3); color: rgb(62,113,187);"> Hudson Nash </h1>
+				<style>
+					.bouton-image:before {
+						content: "";
+						width: 16px;
+						height: 16px;
+						display: inline-block;
+						margin-right: 5px;
+						vertical-align: text-top;
+						background-color: transparent;
+						background-position : center center;
+						background-repeat:no-repeat;
+					}
+					.but1:before{
+						background-image: url("images/myLogo.svg");
+					}
+				</style>
+				<p style="text-align: justify; padding-left: 7%; padding-right: 7%; color: rgb(25,66,117);">Hello, there! I'm a student at the Academy of Science and Technology at the Woodlands College Park High School. 
+				Currently, I pursue student leadership and research through entrepreneurship and environmental biotechnology.</p>
+			</div>
 		</div>
 	</div>
-</div>
 
 <!-- Home - 'My Life Feed' Carousel -->
 		<div id="myLifeFeed" class="carousel slide" data-ride="carousel">
@@ -114,40 +146,49 @@ anchors are inline so you need ot make them block to go full width
 				<li data-target="#myLifeFeed" data-slide-to="1"></li>
 				<li data-target="#myLifeFeed" data-slide-to="2"></li>
 				<li data-target="#myLifeFeed" data-slide-to="3"></li>
+				<li data-target="#myLifeFeed" data-slide-to="4"></li>
 			</ol>
 					
 			<!-- wrapper for slides -->
 			<div class="carousel-inner col-md-auto" role="listbox">
 				<div class="carousel-item active">
 					<picture>
-						<source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
-						<source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
-						<source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
-						<img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+						<source srcset="images/2000x500/me-at-the-aiche-convention-2000x500.jpg" media="(min-width: 1400px)"> 						 <!-- 2000x500 -->
+						<source srcset="images/1400x500/me-at-the-aiche-convention-1400x500.jpg" media="(min-width: 769px)"> 				 <!-- 1400x500 -->
+						<source srcset="images/800x500/me-at-the-aiche-convention-800x500.jpg" media="(min-width: 577px)"> 					 <!-- 800x500 -->
+						<img srcset="images/600x500/me-at-the-aiche-convention-600x500.jpg" alt="responsive image" class="d-block img-fluid"> <!-- 600x500 -->
                     </picture>
 				</div>
 				<div class="carousel-item">
 					<picture>
-						<source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
-						<source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
-						<source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
-						<img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+						<source srcset="images/2000x500/disney-trip-2000x500.jpg" media="(min-width: 1400px)">
+						<source srcset="images/1400x500/disney-trip-1400x500.jpg" media="(min-width: 769px)">
+						<source srcset="images/800x500/disney-trip-800x500.jpg" media="(min-width: 577px)">
+						<img srcset="images/600x500/disney-trip-600x500.jpg" alt="responsive image" class="d-block img-fluid">
                     </picture>
 				</div>
 				<div class="carousel-item">
 					<picture>
-						<source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
-						<source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
-						<source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
-						<img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+						<source srcset="images/2000x500/icdc-2018-2000x500.jpg" media="(min-width: 1400px)">
+						<source srcset="images/1400x500/icdc-2018-1400x500.jpg" media="(min-width: 769px)">
+						<source srcset="images/800x500/icdc-2018-800x500.jpg" media="(min-width: 577px)">
+						<img srcset="images/600x500/icdc-2018-600x500.jpg" alt="responsive image" class="d-block img-fluid">
                     </picture>
 				</div>
 				<div class="carousel-item">
 					<picture>
-						<source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
-						<source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
-						<source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
-						<img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+						<source srcset="images/2000x500/repsol-2018-2000x500.jpg" media="(min-width: 1400px)">
+						<source srcset="images/1400x500/repsol-2018-1400x500.jpg" media="(min-width: 769px)">
+						<source srcset="images/800x500/repsol-2018-800x500.jpg" media="(min-width: 577px)">
+						<img srcset="images/600x500/repsol-2018-600x500.jpg" alt="responsive image" class="d-block img-fluid">
+                    </picture>
+				</div>
+				<div class="carousel-item">
+					<picture>
+						<source srcset="images/2000x500/tulane-trip-2000x500.jpg" media="(min-width: 1400px)">
+						<source srcset="images/1400x500/tulane-trip-1400x500.jpg" media="(min-width: 769px)">
+						<source srcset="images/800x500/tulane-trip-1400x500.jpg" media="(min-width: 577px)">
+						<img srcset="images/600x500/tulane-trip-600x500.jpg" alt="responsive image" class="d-block img-fluid">
                     </picture>
 				</div>
 			</div>
