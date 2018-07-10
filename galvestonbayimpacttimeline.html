@@ -2,55 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>TimelineJS Embed</title>
+<title>Galveston Bay Impact Timeline | A Brief History</title>
 <meta charset="utf-8">
-<meta name="description" content="TimelineJS Embed">
+<meta name="description" content="A brief history of our favorite bay.">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<link rel="icon" type="image/png" href="https://cdn.knightlab.com/libs/purpleline/latest/img/favicon.png">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="images/harclogo.png">
 <base target="_blank">
-
-<!-- Style-->
-<style>
-html, body {
-    width: 100%;
-    height:100%;
-    padding: 0px;
-    margin: 0px;
-}
-#timeline-embed {
-    height: 100%;
-}
-</style>
-<!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
-<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
-</html>
 <body>
-  <!-- BEGIN Timeline Embed -->
-  <div id="timeline-embed"></div>
-  <!-- Override -->
-  <script type="text/javascript">
-    var lang = window.location.href.match(/&lang=([a-zA-Z]*)&?/);
-
-    if (lang) {
-      document.getElementsByTagName('html')[0].setAttribute('lang', lang[1]);
-    }
-    var trim_point = window.location.href.indexOf('embed/index.html');
-    if (trim_point > 0) {
-      var embed_path = window.location.href.substring(0,trim_point); // supports https access via https://s3.amazonaws.com/cdn.knightlab.com/libs/timeline/latest/embed/index.html
-    } else {
-      var embed_path = "https://cdn.knightlab.com/libs/timeline3/latest/";
-    }
-    var oembed_link = document.createElement('link');
-    oembed_link['rel'] = 'alternate';
-    oembed_link['type'] = 'application/json+oembed';
-    oembed_link['href'] = 'https://oembed.knightlab.com/timeline/?url=' + encodeURIComponent(window.location.href);
-    document.head.appendChild(oembed_link);
-  </script>
-  <script type="text/javascript" src="../js/timeline-embed-cdn.js"></script>
-  <!-- END Timeline Embed-->
+    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1ZFhGPPasQcIZ_
+                 UYfnDD0Uh_NY8qyDr9o6_Aa-wySeHo&font=Default&lang=en&initial_zoom=2&height=650' 
+            style="width: 100%; height: 100%; overflow: hidden;" frameborder='0'></iframe>                             
 </body>
 </html>
